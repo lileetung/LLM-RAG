@@ -45,7 +45,7 @@ class LLM_GUI:
             self.display_text.config(state=tk.DISABLED)
 
         # model reply
-        self.insert_text(f"AI: This is a reply to '{query}'.\n", 'ai')
+        self.insert_text(f"AI: Ava Chen's background as an engineer has greatly influenced her writing style and content. As an engineer, she is trained to analyze complex systems and identify patterns and trends. She applies these skills to her writing by creating detailed and plausible worlds, characters, and technologies. Additionally, her engineering background gives her a unique perspective on the intersection of technology and society, which she incorporates into her stories. As a result, Ava Chen's writing is characterized by its technical accuracy, thorough world-building, and thoughtful exploration of the implications of emerging technologies.\n", 'ai')
 
     def insert_text(self, text, tag):
         self.display_text.config(state=tk.NORMAL)  # insert text

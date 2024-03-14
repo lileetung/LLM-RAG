@@ -49,4 +49,5 @@ After running the `RAG.py` script, the system will prompt you to input a questio
 
 I'm currently developing a GUI for the project using Tkinter. Here's a screenshot:
 
-<img width="649" alt="LLMGUI" src="https://github.com/lileetung/LLM-RAG/assets/83776772/2261ac62-8530-4021-a85f-d11c64c8f7d5">
+<img width="717" alt="LLMGUI" src="https://github.com/lileetung/LLM-RAG/assets/83776772/1d752b34-6179-4fb0-8036-01f34ee12625">
+

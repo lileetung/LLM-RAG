@@ -33,8 +33,7 @@ model_kwargs = {'device': 'cpu'}
 embedding = HuggingFaceEmbeddings(model_name=model_name, model_kwargs=model_kwargs)
 
 # 創建並填充向量數據庫
-vectordb = Chroma.from_documents(persist_directory=persist_directory)
-vectordb.add_documents(documents=all_splits_data1, embedding=embedding)
+vectordb = Chroma.from_documents(documents=all_splits_data1, embedding=embedding, persist_directory=persist_directory)
 vectordb.add_documents(documents=all_splits_data2, embedding=embedding)
 
 # init Llama，download from https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/tree/main

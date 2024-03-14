@@ -29,10 +29,10 @@ persist_directory = 'db'
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 model_kwargs = {'device': 'cpu'}
 
-# 初始化嵌入模型
+# init embedding
 embedding = HuggingFaceEmbeddings(model_name=model_name, model_kwargs=model_kwargs)
 
-# 創建並填充向量數據庫
+# vectordb
 vectordb = Chroma.from_documents(documents=all_splits_data1, embedding=embedding, persist_directory=persist_directory)
 vectordb.add_documents(documents=all_splits_data2, embedding=embedding)
 
@@ -86,10 +86,10 @@ qa = RetrievalQA.from_chain_type(
     verbose=True
 )
 
-# chat bot
+# LLMChain
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 print("""
-      使用LLMChain進行問答
+      MODE: LLMChain
       You can use the questions below:
       1. What are the main cultural impacts of the Renaissance in Europe?
       2. What is the impact of cryptocurrency on traditional banking systems?
@@ -97,10 +97,10 @@ print("""
 query = input("text the question: ")
 llm_chain.invoke({"question": query})
 
-# 使用RetrievalQA進行問答
+# RetrievalQA
 while True:
     print("""
-          使用RetrievalQA進行問答
+          MODE: RetrievalQA
           You can use the questions below:
           1. how much IQ does Miller have?
           2. What makes Drew Miller's artwork stand out in contemporary art?

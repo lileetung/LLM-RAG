@@ -1,3 +1,5 @@
+<img width="722" alt="RAG1" src="https://github.com/lileetung/LLM-RAG/assets/83776772/ed4a6d7b-7a58-47a6-913c-0081c1d6ad7d">
+<img width="722" alt="RAG2" src="https://github.com/lileetung/LLM-RAG/assets/83776772/29aeaa24-466d-4aa6-a9c8-b6e0203bb439">
 
 # LLM RAG
 
@@ -45,9 +47,4 @@ After running the `RAG.py` script, the system will prompt you to input a questio
 - **LLMChain mode:** Directly utilizes the LLM for answering questions.
 - **RetrievalQA mode:** Uses a retrieval system to fetch relevant information which is then passed to the LLM for generating answers.
 
-## GUI Development
-
-I'm currently developing a GUI for the project using Tkinter. Here's a screenshot:
-
-<img width="717" alt="LLMGUI" src="https://github.com/lileetung/LLM-RAG/assets/83776772/1d752b34-6179-4fb0-8036-01f34ee12625">
 

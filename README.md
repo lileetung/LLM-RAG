@@ -39,6 +39,10 @@ cd LLM-RAG
 ```bash
 python RAG.py
 ```
+or 
+```bash
+python LLM_GUI.py
+```
 
 ## Usage
 

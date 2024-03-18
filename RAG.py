@@ -24,15 +24,13 @@ PDF_data_data2 = loader_data2.load()
 text_splitter_data2 = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=20)
 all_splits_data2 = text_splitter_data2.split_documents(PDF_data_data2)
 
-# create db
-persist_directory = 'db'
+# init embedding
 model_name = "sentence-transformers/all-MiniLM-L6-v2"
 model_kwargs = {'device': 'cpu'}
-
-# init embedding
 embedding = HuggingFaceEmbeddings(model_name=model_name, model_kwargs=model_kwargs)
 
-# vectordb
+# create vectordb
+persist_directory = 'db'
 vectordb = Chroma.from_documents(documents=all_splits_data1, embedding=embedding, persist_directory=persist_directory)
 vectordb.add_documents(documents=all_splits_data2, embedding=embedding)
 
@@ -102,7 +100,7 @@ while True:
     print("""
           MODE: RetrievalQA
           You can use the questions below:
-          1. how much IQ does Miller have?
+          1. What is Drew Miller's intelligence score?
           2. What makes Drew Miller's artwork stand out in contemporary art?
           3. Introduce Ava Chen.
           4. How has Ava Chen's background as an engineer influenced her writing style and content?
